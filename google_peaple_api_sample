@@ -65,7 +65,7 @@ if __name__ == '__main__':
     try:
         creds = main()
         service = build('people', 'v1', credentials=creds)
-        contacts = read_excel('cotact.xlsx')
+        contacts = read_excel('contact.xlsx')
         add_contacts(service, contacts)
     except HttpError as err:
         print(err)

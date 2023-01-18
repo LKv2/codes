@@ -45,8 +45,8 @@ def read_excel(file_path):
 
 def add_contacts(service, data):
     for i in range(1, len(data)):
-        name = data[i][0]
-        phone = data[i][1]
+        name = data[i][1]
+        phone = data[i][0]
         contact = {
             'names': [{
                 'givenName': name

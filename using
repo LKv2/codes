@@ -1,0 +1,14 @@
+In the Google Cloud console, go to Menu menu > APIs & Services > Credentials.
+Go to Credentials
+https://console.cloud.google.com/apis/credentials
+Click Create Credentials > OAuth client ID.
+Click Application type > Desktop app.
+In the Name field, type a name for the credential. This name is only shown in the Google Cloud console.
+Click Create. The OAuth client created screen appears, showing your new Client ID and Client secret.
+Click OK. The newly created credential appears under OAuth 2.0 Client IDs.
+Save the downloaded JSON file as credentials.json, and move the file to your working directory.
+Install the Google client library
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+In your working directory, add your Excel file with named contact.xlsx.
+Run the sample
+python3 google_peaple_api_sample.py

@@ -1,0 +1,21 @@
+import csv
+import openpyxl
+
+def excel_to_csv(file_path):
+    wb = openpyxl.load_workbook(file_path)
+    sheet = wb.active
+    csv_file = open('contacts.csv', 'w', newline='')
+    csv_writer = csv.writer(csv_file)
+
+    # Write the header row
+    csv_writer.writerow(['Nom', 'Téléphone'])
+
+    # Write the data rows
+    for row in sheet.iter_rows(values_only=True):
+        csv_writer.writerow(row)
+
+    csv_file.close()
+    print('Conversion terminée')
+
+if __name__ == '__main__':
+  excel_to_csv('contacts.xlsx')
